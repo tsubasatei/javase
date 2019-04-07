@@ -546,7 +546,7 @@ public class JDBCTest {
      * 1. Statement: 用于执行 SQL 语句的对象
      * 1). 通过 Connection 的 createStatement() 方法来获取
      * 2). 通过 executeUpdate(sql) 可以执行 SQL 语句.
-     * 3). 传入的 SQL 可以是 INSRET, UPDATE 或 DELETE. 但不能是 SELECT
+     * 3). 传入的 SQL 可以是 INSERT, UPDATE 或 DELETE. 但不能是 SELECT
      *
      * 2. Connection、Statement 都是应用程序和数据库服务器的连接资源. 使用后一定要关闭.
      * 需要在 finally 中关闭 Connection 和 Statement 对象.

@@ -40,7 +40,7 @@ public class DBUtilsTest {
 
     /**
      * 1. ResultSetHandler 的作用: QueryRunner 的 query 方法的返回值最终取决于
-     * query 方法的 ResultHandler 参数的 hanlde 方法的返回值.
+     * query 方法的 ResultHandler 参数的 handle 方法的返回值.
      *
      * 2. BeanListHandler: 把结果集转为一个 Bean 的 List, 并返回. Bean 的类型在
      * 创建 BeanListHanlder 对象时以 Class 对象的方式传入. 可以适应列的别名来映射

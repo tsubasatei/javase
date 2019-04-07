@@ -15,10 +15,13 @@ public class ArrayTest {
     public void test1 () {
         int[] arr = {2, 3, 5, 7, 11, 13, 17, 19};
 
+        // 数组复制
         int[] copy = Arrays.copyOf(arr, arr.length);
+        System.out.println(arr == copy); // false
         Arrays.stream(copy).forEach(System.out::println);
     }
 
+    // 求最大值
     @Test
     public void test () {
         int arr[] = new int[10];
