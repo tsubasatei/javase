@@ -25,6 +25,7 @@ public class WeakHashMapDemo {
         key = null;
         System.gc();
         System.out.println(map);
+        System.out.println(map.size());
     }
 
     private static void myHashMap() {
@@ -37,7 +38,6 @@ public class WeakHashMapDemo {
         key = null;
         System.gc();
         System.out.println(map);
-        System.out.println(map.size());
         System.out.println(map.size());
     }
 }

@@ -14,12 +14,12 @@ public class SynchronousQueueDemo {
 
         new Thread(() -> {
             try {
-                System.out.println(Thread.currentThread().getName() + "\t put 1");
                 blockingQueue.put("1");
-                System.out.println(Thread.currentThread().getName() + "\t put 2");
+                System.out.println(Thread.currentThread().getName() + "\t put 1");
                 blockingQueue.put("2");
-                System.out.println(Thread.currentThread().getName() + "\t put 3");
+                System.out.println(Thread.currentThread().getName() + "\t put 2");
                 blockingQueue.put("3");
+                System.out.println(Thread.currentThread().getName() + "\t put 3");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
