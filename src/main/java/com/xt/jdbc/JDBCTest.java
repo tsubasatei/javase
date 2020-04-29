@@ -267,34 +267,34 @@ public class JDBCTest {
      */
     @Test
     public void testReadBlob () throws IOException {
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
-        InputStream inputStream = null;
-        try (OutputStream outputStream = new FileOutputStream("picture2.jpg")){
-            connection = JDBCTools.getConnection();
-            String sql = "SELECT id, name, email, birth, picture FROM customers WHERE id = ?";
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, 7);
-            resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                int id = resultSet.getInt(1);
-                String name = resultSet.getString(2);
-                String email = resultSet.getString(3);
-                Date birth = resultSet.getDate(4);
-
-                Customer customer = new Customer(id, name, email, birth);
-                System.out.println(customer.toString());
-
-                inputStream = resultSet.getBinaryStream(5);
-                inputStream.transferTo(outputStream);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            inputStream.close();
-            JDBCTools.release(resultSet, preparedStatement, connection);
-        }
+//        Connection connection = null;
+//        PreparedStatement preparedStatement = null;
+//        ResultSet resultSet = null;
+//        InputStream inputStream = null;
+//        try (OutputStream outputStream = new FileOutputStream("picture2.jpg")){
+//            connection = JDBCTools.getConnection();
+//            String sql = "SELECT id, name, email, birth, picture FROM customers WHERE id = ?";
+//            preparedStatement = connection.prepareStatement(sql);
+//            preparedStatement.setInt(1, 7);
+//            resultSet = preparedStatement.executeQuery();
+//            if (resultSet.next()) {
+//                int id = resultSet.getInt(1);
+//                String name = resultSet.getString(2);
+//                String email = resultSet.getString(3);
+//                Date birth = resultSet.getDate(4);
+//
+//                Customer customer = new Customer(id, name, email, birth);
+//                System.out.println(customer.toString());
+//
+//                inputStream = resultSet.getBinaryStream(5);
+//                inputStream.transferTo(outputStream);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        } finally {
+//            inputStream.close();
+//            JDBCTools.release(resultSet, preparedStatement, connection);
+//        }
     }
     
     /**

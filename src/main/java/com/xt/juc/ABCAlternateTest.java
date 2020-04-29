@@ -5,6 +5,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
+ * 线程间通信
  * 编写一个程序，开启3 个线程，这三个线程的ID 分别为A、B、C，每个线程将自己的ID 在屏幕上打印10 遍，要求输出的结果必须按顺序显示。
  * 如：ABCABCABC…… 依次递归
  */

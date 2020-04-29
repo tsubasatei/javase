@@ -15,7 +15,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class CopyOnWriteArrayListTest {
 
     public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             new Thread(new HelloThread()).start();
         }
     }

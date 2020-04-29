@@ -64,7 +64,7 @@ public class ThreadTest {
         // 设置线程池的属性
         System.out.println(service.getClass());
         service.setCorePoolSize(15);
-        service.setKeepAliveTime(3000l, null);
+        service.setKeepAliveTime(3000l, TimeUnit.SECONDS);
         // execute() 适用于 Runnable
         // 2. 执行指定的线程的操作，需要提供实现 Runnable接口或 Callable 接口实现类的对象
         service.execute(() -> {

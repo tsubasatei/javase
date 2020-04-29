@@ -4,7 +4,7 @@ package com.xt.juc;
  * 线程八锁
  * 题目：判断打印的 one or two
  *
- * 1. 两个普通同步方法，两个线程，标准打印，打印？ // one two
+ * 1. 两个普通同步方法，一个Number对象，两个线程,分别打印，标准打印，打印？ // one two
  * 2. 新增 Thread.sleep()  给 getOne(), 打印？  // one two
  * 3. 新增普通方法 getThree(), 打印？           // three one two
  * 4. 两个普通同步方法，两个 Number 对象， 打印？ // two one
@@ -33,6 +33,7 @@ public class Thread8MonitorTest {
 }
 
 class Number {
+    // 2
     public static synchronized void getOne() {
         try {
             Thread.sleep(3000);
@@ -41,10 +42,12 @@ class Number {
         }
         System.out.println("one");
     }
+    // 1
     public static synchronized void getTwo() {
         System.out.println("two");
     }
 
+    // 3
     public void getThree() {
         System.out.println("three");
     }

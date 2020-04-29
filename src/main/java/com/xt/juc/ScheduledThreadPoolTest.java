@@ -21,7 +21,7 @@ import java.util.concurrent.*;
  * ScheduledExecutorService newScheduledThreadPool() : 创建延迟或定时的执行任务。
  *
  */
-public class ScheduledThreaPoolTest {
+public class ScheduledThreadPoolTest {
 
     public static void main(String[] args) {
         ScheduledExecutorService pool = Executors.newScheduledThreadPool(5);

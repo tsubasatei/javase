@@ -24,7 +24,7 @@ class MyCAS {
         return value;
     }
 
-    // 比较
+    // 比较 返回旧值
     public synchronized int compareAndSwap (int expected, int newValue) {
         int old = value;
         if (old == expected) {
